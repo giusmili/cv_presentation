@@ -112,11 +112,13 @@ console.log(result)
     let modals = function(){
         let image= this.dataset.image
         let titles = this.dataset.titles
+        let contents = this.dataset.contents
 
         //open modal and injection
         modal.classList.add("modal-active")
         document.querySelector(".modal img").setAttribute("src", image)
         document.querySelector(".modal h2").innerText = titles
+        document.querySelector(".modal p").innerText = contents
         console.log(image+' '+titles)
     }
 

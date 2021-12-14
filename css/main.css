@@ -156,6 +156,7 @@ aside ul li:last-child{
     background: var(--color-theme-card);
 }
 
+
 /* partie losirs */
 main section:nth-child(5) ul li{
     text-align: center;
@@ -222,7 +223,7 @@ footer p{
     main section{
         margin-bottom: .1rem;
     }
-    main section:last-child ul{
+    /* main section:last-child ul{
         width: auto;
         display: block;
         text-align: left;
@@ -230,7 +231,7 @@ footer p{
     main section:last-child ul li{
         text-align: left;
         line-height: 3rem;
-    }
+    } */
     main section p, aside p{
         text-align: justify;
     }
