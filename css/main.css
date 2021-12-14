@@ -22,6 +22,19 @@ h1,h2,h3,h4,p,ul,ol{
 a{
     text-decoration: none;
 }
+/* scroll bars */
+*{
+    /* For FF and non-webkit browsers */
+    scrollbar-width: thin;
+    scrollbar-color: #000 #FFF;
+}
+*::-webkit-scrollbar {
+    width: .6rem;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(92, 91, 91);
+    outline: thin solid #222;
+}
 /* theme */
 :root{
     --color-theme-header: #55ACEE;
