@@ -1,0 +1,296 @@
+/*reset css*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font: 1.6rem 'Montserrat',sans-serif;
+    margin: 0;
+    background-color: #292F33;
+    line-height: 1.6;
+    text-rendering:optimizeLegibility;
+}
+h1,h2,h3,h4,p,ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+/* theme */
+:root{
+    --color-theme-header: #55ACEE;
+    --color-theme-main: #292F33;
+    --color-theme-secondary: #66757F;
+    --color-theme-bg: #CCD6DD;
+    --color-theme-dark: #222;
+    --color-theme-card: #fafafa;
+    --color-theme-red: #E50914;
+}
+header h1{
+    position: relative;
+    text-align: center;
+    background-color: var(--color-theme-header);
+    line-height: 8.5rem;
+    font-weight: normal;
+    color: #222;
+}
+header .logo{
+    position: absolute;
+    top: 0.8%;
+    left: 33%;
+    z-index: 1;
+}
+main{
+    max-width: 100rem;
+    margin: 2rem auto;
+}
+main h2{
+    font-size: x-large;
+    background-color: var(--color-theme-header);
+    padding: 1rem;
+    
+}
+main section{
+    margin-bottom: 2rem;
+}
+main section ul img{
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+main section ul, main section p, nav ul{
+    background: var(--color-theme-bg);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+nav ul{
+    max-width: 100rem;
+    margin: 2rem auto;
+    padding: 0;
+    gap: 0;
+}
+nav ul li{
+    background: var(--color-theme-main);
+    color: #fff;
+    text-align: center;
+    line-height: 4rem;
+    
+}
+
+nav ul li a{
+    color: inherit;
+    display: block;
+    width: 100%;
+    transition: all .6s ease-in-out;
+    
+}
+nav ul li:hover a{
+    background-color: #fafafa;
+    color: #222;
+}
+aside{
+    display: table;
+    max-width: 100rem;
+    margin: 2rem auto 0;
+    background-color: var(--color-theme-card);
+    border-collapse: separate;
+    border-spacing: .1rem;
+
+    
+}
+aside ul li img{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    cursor: pointer;
+}
+aside ul{
+    display: table-row;
+}
+aside ul li{
+    display: table-cell;
+    vertical-align: middle;
+}
+aside ul li:first-child{
+    width: 30%;
+}
+aside ul li:last-child{
+    padding-left: 1rem;
+}
+/* modale */
+.modal{
+    padding: 1rem;
+    border: solid .1rem transparent;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    max-width: 80.0rem;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    z-index: -1;
+    opacity:0;
+    cursor: pointer;
+    
+    transition: all 500ms ease-in-out;
+}
+.modal-active{
+    z-index: 1;
+    opacity:1;
+    transform-origin: center center;
+}
+.modal img{
+    display: inline-block;
+    width: 100%;
+}
+.modal figcaption *{
+    text-align: center;
+    background: var(--color-theme-card);
+}
+
+/* partie losirs */
+main section:nth-child(5) ul li{
+    text-align: center;
+}
+
+/* icones pour les loisirs */
+main section:nth-child(5) ul li .trip-icon::before,
+main section:nth-child(5) ul li .movie-icon::before,
+main section:nth-child(5) ul li .moon-icon::before,
+main section:nth-child(5) ul li .music-icon::before{
+    content: url(../asset/sun.svg);
+    vertical-align: -.6rem;
+    margin-right: .3rem;
+}
+main section:nth-child(5) ul li .movie-icon::before{
+    content: url(../asset/film.svg);
+}
+main section:nth-child(5) ul li .moon-icon::before{
+    content: url(../asset/moon.svg);
+}
+main section:nth-child(5) ul li .music-icon::before{
+    content: url(../asset/headphones.svg);
+}
+/* end icon */
+main section p{
+    display: block;
+    
+}
+main section:nth-child(4) ul{
+    display: block;
+}
+main section h2::before{
+    content: url(../asset/activity.svg);
+    vertical-align: middle;
+    margin-right: .4rem;
+}
+footer p{
+    text-align: center;
+    color: var(--color-theme-bg);
+}
+/* responsive */
+@media screen and (max-width: 60rem){
+    body{
+        margin: 0 1%;
+    }
+    header h1{
+      
+        background-color: var(--color-theme-red);
+        font-size: large;
+        color: #fff;
+    }
+    header .logo{
+        padding: 1rem 0;
+        position: static;
+        text-align: center; 
+        
+    }
+    aside{
+        margin: 0 0 .1rem;
+    }
+    main{
+        margin-top: .1rem;
+    }
+    main section{
+        margin-bottom: .1rem;
+    }
+    main section:last-child ul{
+        width: auto;
+        display: block;
+        text-align: left;
+    }
+    main section:last-child ul li{
+        text-align: left;
+        line-height: 3rem;
+    }
+    main section p, aside p{
+        text-align: justify;
+    }
+    section h2, aside h2{
+        font-size: large;
+    }
+    .modal{
+        margin: 0;
+        width: 100%;
+    }
+    nav ul{
+        display: block;
+        width:  auto;
+        max-width: 100rem;
+        margin: 2rem auto 0;
+        padding: 0;
+        gap: 0;
+    }
+    nav ul li{
+        text-align: left;
+        border-bottom: solid .1rem var(--color-theme-secondary);
+    }
+
+    aside ul li p{
+        overflow: hidden;
+        text-overflow: ellipsis; /* limiter l'affichage long du texte */
+        padding-right: 1%;
+        width: 20rem;
+        white-space: nowrap; /* empecher le texte de revenir à la ligne */
+    }
+}
+@media screen and (orientation: landscape){
+    main section ul{
+        background: var(--color-theme-bg);
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        
+    }
+    header h1{
+        font-size: xx-large;
+    }
+    nav ul{
+       
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+       
+    }
+    nav ul li{
+        text-align: center;
+    }
+    aside ul li p{ /* remettre les propriété à zero */
+        overflow:inherit;
+        text-overflow:inherit;
+        padding-right: 1%;
+        white-space:inherit;
+        width: 100%;
+        
+    }
+    
+}   
